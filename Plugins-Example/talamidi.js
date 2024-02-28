@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-const handler = async (m) => {
+const handler = async (m, {text}) => {
 let res = await fetch(`https://midsoune-b5be75a7ee15.herokuapp.com/api/talamidi?drs=${encodeURIComponent(text)}`)
   let data = await res.json();
   const results = JSON.parse(data.result);
