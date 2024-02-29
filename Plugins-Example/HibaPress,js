@@ -9,8 +9,7 @@ const midsoune = async (m, {conn, args}) => {
       const image = results.image;
       await conn.sendFile(m.chat, image, '', cap, m);
     } catch (error) {
-      console.error("حدث خطأ أثناء جلب البيانات:", error);
-    }
+      console.error("حدث خطأ أثناء جلب البيانات:", error);}
   } else {
     try {
       let res = await fetch('https://midsoune-b5be75a7ee15.herokuapp.com/api/hibapress');
@@ -22,9 +21,7 @@ const midsoune = async (m, {conn, args}) => {
       }
       await m.reply(message);
     } catch (error) {
-      console.error("حدث خطأ أثناء جلب البيانات:", error);
-    }
-  }
+      console.error("حدث خطأ أثناء جلب البيانات:", error);}}
 };
 midsoune.command = ['hibapress', 'hp', 'هبة'];
 export default midsoune;
