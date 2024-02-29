@@ -18,13 +18,10 @@ const midsoune = async (m, {conn, args}) => {
       const results = JSON.parse(data.result);
       let message = '';
       for (let result of results) {
-        message += `\n🗞️ *الخبر:* ${result.title}\n📰 *الرابط:* ${result.url}\n`;
-      }
+        message += `\n🗞️ *الخبر:* ${result.title}\n📰 *الرابط:* ${result.url}\n`;}
       await m.reply(message);
     } catch (error) {
-      console.error("حدث خطأ أثناء جلب البيانات:", error);
-    }
-  }
+      console.error("حدث خطأ أثناء جلب البيانات:", error);}}
 };
 midsoune.command = ['hespress'];
 export default midsoune;
