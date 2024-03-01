@@ -10,10 +10,10 @@ const midsoune = async (m, {args, command}) => {
 ‏▬▬▬▬▬▬▬▬▬▬
   🧑🏻 *صاحب الرقم:* ${data.name}
   📞 *رقم الهاتف:* ${data.e164Format}
-  🌍 *الدولة:* ${data.country_Code}
+  🌍 *الدولة:* ${data.countryName}
   ✉️ *البريد الإلكتروني:* ${data.email}
-  📶 *شركة الاتصال:* ${data.sim}
-  ☎️ *نوع الرقم:* ${data.numberType}
+  📶 *شركة الاتصال:* ${data.carrier}
+  ☎️ *نوع الرقم:* ${data.type}
 `;
 await m.reply(message);};
 midsoune.command = ['truecaller'];
