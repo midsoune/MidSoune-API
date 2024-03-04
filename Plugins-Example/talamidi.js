@@ -16,7 +16,7 @@ const midsoune = async (m, {conn, text}) => {
       const results = JSON.parse(data.result);
       let message = '';
       for(let result of results) {
-         message += `*الدرس:* ${result.title}\n*الرابط:* ${result.link}\n\n`;}
+         message += `*الدرس:* ${result.title}\n*الرابط:* ${decodeURI(result.link)}\n\n`;}
        await m.reply(message);
     } catch (error) {
       console.error("حدث خطأ أثناء جلب البيانات:", error);}}
