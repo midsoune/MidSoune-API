@@ -1,8 +1,8 @@
 // YTB desc
 import fetch from 'node-fetch';
 const midsoune = async (m, {conn, text}) => {
-let res = await fetch(`https://m-api-igok.onrender.com/api/dowloader/yt?url=${text}`)
-let data = await res.json();
+let results = await fetch(`https://m-api-igok.onrender.com/api/dowloader/yt?url=${text}`)
+let data = await results.json();
 const res = data.result.des
 await m.reply(res)
 };
