@@ -1,7 +1,7 @@
 // Video
 import fetch from 'node-fetch';
 const midsoune = async (m, {conn, text}) => {
-let res = await fetch(`https://midsoune-b5be75a7ee15.herokuapp.com/api/youtube?url=${text}`)
+let res = await fetch(`https://midsouneapi-fee7b0be8faf.herokuapp.com/api/youtube?url=${text}`)
   let data = await res.json();
     const res = data.video.url
     const title = data.video.title
@@ -13,7 +13,7 @@ export default midsoune;
 // Audio
 import fetch from 'node-fetch';
 const midsoune = async (m, { conn, text }) => {
-    let results = await fetch(`https://midsoune-b5be75a7ee15.herokuapp.com/api/youtube?url=${text}`);
+    let results = await fetch(`https://midsouneapi-fee7b0be8faf.herokuapp.com/api/youtube?url=${text}`);
     let data = await results.json();
     const res = data.audio.url
     const title = data.audio.title
