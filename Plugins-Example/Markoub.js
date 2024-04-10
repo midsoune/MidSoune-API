@@ -8,7 +8,7 @@ const midsoune = async (m, {args, command}) => {
     lblays = "1";
     nhar = '' ;}
   let [mdina1, mdina2] = args[0].split("+").map((mdina) => mdina.charAt(0).toUpperCase() + mdina.slice(1));
-  const url = `https://midsoune-b5be75a7ee15.herokuapp.com/api/markoub?city1=${mdina1}&city2=${mdina2}&seats=${lblays}&date=${nhar}`;
+  const url = `https://midsouneapi-fee7b0be8faf.herokuapp.com/api/markoub?city1=${mdina1}&city2=${mdina2}&seats=${lblays}&date=${nhar}`;
   let response = await fetch(url);
   console.log(url);
  let responseData = await response.json();
