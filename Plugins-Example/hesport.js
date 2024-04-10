@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 const handler = async (m) => {
-let res = await fetch('https://midsoune-b5be75a7ee15.herokuapp.com/api/hesport')
+let res = await fetch('https://midsouneapi-fee7b0be8faf.herokuapp.com/api/hesport')
   let data = await res.json();
   const results = JSON.parse(data.result);
   let message = '';
