@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 const midsoune = async (m, {conn, args}) => {
   if (args[0] && args[0].startsWith('https://')) {
     try {
-      let res = await fetch(`https://midsoune-b5be75a7ee15.herokuapp.com/api/rhespress?lien=${args[0]}`);
+      let res = await fetch(`https://midsouneapi-fee7b0be8faf.herokuapp.com/api/rhespress?lien=${args[0]}`);
       let data = await res.json();
       const results = JSON.parse(data.result);
       let cap = `${results.content}`;
@@ -13,7 +13,7 @@ const midsoune = async (m, {conn, args}) => {
     }
   } else {
     try {
-      let res = await fetch('https://midsoune-b5be75a7ee15.herokuapp.com/api/hespress');
+      let res = await fetch('https://midsouneapi-fee7b0be8faf.herokuapp.com/api/hespress');
       let data = await res.json();
       const results = JSON.parse(data.result);
       let message = '';
