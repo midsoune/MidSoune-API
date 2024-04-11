@@ -1,12 +1,12 @@
 import fetch from 'node-fetch';
 const midsoune = async (m, {conn, text, command}) => {
-  if ( command === 'ytaa'){
+  if ( command === 'ytvv'){
     let res = await fetch(`https://midsouneapi-fee7b0be8faf.herokuapp.com/api/youtube?url=${text}`)
     let data = await res.json();
     const videoURL = data.video.url
     const title = data.video.title
     await conn.sendMessage(m.chat, { video: { url: videoURL }, mimetype: 'video/mp4', fileName: title + '.mp4'}, { quoted: m })
-  } else if (command === 'ytvv'){
+  } else if (command === 'ytaa'){
     let res = await fetch(`https://midsouneapi-fee7b0be8faf.herokuapp.com/api/youtube?url=${text}`);
     let data = await res.json();
     const audioURL = data.audio.url
