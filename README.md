@@ -1,2 +1,2 @@
 # MidSoune-API
-https://midsoune-b5be75a7ee15.herokuapp.com/
+https://midsouneapi-fee7b0be8faf.herokuapp.com/
